@@ -318,9 +318,10 @@ NTSTATUS DispatchInternalControl(PDEVICE_OBJECT fdo, PIRP Irp)
                 {
                     status = STATUS_BUFFER_TOO_SMALL;
                     break;
-                }
+                };
+                DbgPrintEx(0, 0, Irp->AssociatedIrp.SystemBuffer);
                 RtlCopyMemory(buffer, Irp->AssociatedIrp.SystemBuffer, BytesToRead);
-                info = sizeof(IOCTL_HID_READ_REPORT);
+                info = sizeof(BytesToRead);
                 break;
             }
         }
