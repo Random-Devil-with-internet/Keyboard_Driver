@@ -1,0 +1,9 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define IOCTL_HID_GET_INPUT_REPORT HID_OUT_CTL_CODE(104)
+#define RtlCopyMemory(Destination, Source, Length) memcpy((Destination),(Source),(Length))
+#define IOCTL_HID_GET_FEATURE HID_OUT_CTL_CODE(100)
+#define IOCTL_HID_READ_REPORT HID_CTL_CODE(2)
+#define Vendor_ID
+#define IOCTL_HID_SEND_IDLE_NOTIFICATION_REQUEST HID_CTL_CODE(10)
