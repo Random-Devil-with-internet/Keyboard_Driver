@@ -319,7 +319,6 @@ NTSTATUS DispatchInternalControl(PDEVICE_OBJECT fdo, PIRP Irp)
                     status = STATUS_BUFFER_TOO_SMALL;
                     break;
                 };
-                DbgPrintEx(0, 0, Irp->AssociatedIrp.SystemBuffer);
                 RtlCopyMemory(buffer, Irp->AssociatedIrp.SystemBuffer, BytesToRead);
                 info = sizeof(BytesToRead);
                 break;
@@ -466,6 +465,8 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
     DriverObject->MajorFunction[IRP_MJ_INTERNAL_DEVICE_CONTROL] = DispatchInternalControl;
     DriverObject->MajorFunction[IRP_MJ_PNP] = DispatchPnp;
     DriverObject->MajorFunction[IRP_MJ_POWER] = DispatchPower;
+
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, "Hello\n");
 
     HID_MINIDRIVER_REGISTRATION reg;
     RtlZeroMemory(&reg, sizeof(reg));

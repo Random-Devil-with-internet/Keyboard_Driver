@@ -1,4 +1,4 @@
 ﻿  Building 'KMDF Driver3' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
   Stamping x64\Debug\KMDFDriver3.inf
-  Stamping [Version] section with DriverVer=09/08/2025,17.10.27.547
+  Stamping [Version] section with DriverVer=10/20/2025,13.55.27.997
   main.c
