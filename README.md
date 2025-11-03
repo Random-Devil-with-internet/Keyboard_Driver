@@ -2,13 +2,19 @@
 # User guide 
 To install the custom keyboard driver you will need to open up the command prompt and run it in administrator. Once it is open you will need to type in the file path to where the files for the driver are eg. sys and inf. To do the following you will need to get devcon installed on the tester machine. You can download it from the windows driver kit.
 After that type in the following command devcon install [the file name of the inf file] \root\ + [driver name]. Eg. devcon install KDMFDriver.inf \root\KDMFDriver. Next you should see something like below and then click install this driver anyway.
-Next go to the system32 folder the new driver sys file should be there.
 
-![hello](https://github.com/Random-Devil-with-internet/Keyboard_Driver/blob/main/Screenshot%202025-11-03%20001722.png)
+![Windows Security](https://github.com/Random-Devil-with-internet/Keyboard_Driver/blob/main/Screenshot%202025-11-03%20001722.png)
+![Command prompt](https://github.com/Random-Devil-with-internet/Keyboard_Driver/blob/main/Screenshot%202025-11-03%20001722.png)
+
+Next go to the system32 folder the new driver sys file should be there.
 
 Now to check if it works you will need to uninstall the in the deceive manger and you can ues winDBG to debug the driver though the use of this function DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, "Hello\n"). And then sends through the com port in the kernel driver debugger. Now the way I’m doing this is by using a virtual machine which you can set up a com port to connect with the debugger. All you need to do is to name the pipe name and choose the port number. 
 
+![VM Settings](https://github.com/Random-Devil-with-internet/Keyboard_Driver/blob/main/Screenshot%202025-11-03%20001833.png)
+
 In the debugger side of things you will need to again copy the pipe name into there.
+
+![WinDBG Com Settings](https://github.com/Random-Devil-with-internet/Keyboard_Driver/blob/main/Screenshot%202025-11-03%20001854.png)
 
 Once you have done that you can launch your virtual machine and the debugger. And you should see your message appear. 
 Now this should have worked but no matter what ever I tried I couldn’t get the driver to install. The image above of the terminal actuality shows three failed attempts. 
@@ -29,10 +35,3 @@ After that I tried a second time with the result being another failure. This tim
 cazz, 2024, YOUR FIRST KERNEL DRIVER (FULL GUIDE), Youtube, Available at: https://www.youtube.com/watch?v=n463QJ4cjsU 
 Walter Oney, 2003, Programming the Microsoft Windows Driver Model, Microsoft, Available at: https://empyreal96.github.io/nt-info-depot/Windows-DDK/Programming.the.Microsoft.Windows.Driver.Model.2nd.Edition.pdf 
 N/A, 2025, Tutorial: Write a Hello World Windows Driver (Kernel-Mode Driver Framework), Microsoft, Available at: https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/writing-a-very-small-kmdf--driver 
-
-
-
-
-
-
-
