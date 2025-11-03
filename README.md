@@ -4,7 +4,7 @@ To install the custom keyboard driver you will need to open up the command promp
 After that type in the following command devcon install [the file name of the inf file] \root\ + [driver name]. Eg. devcon install KDMFDriver.inf \root\KDMFDriver. Next you should see something like below and then click install this driver anyway.
 Next go to the system32 folder the new driver sys file should be there.
 
-![](Screenshot 2025-11-03 001722.png)
+![I](Screenshot 2025-11-03 001722.png)
 
 Now to check if it works you will need to uninstall the in the deceive manger and you can ues winDBG to debug the driver though the use of this function DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, "Hello\n"). And then sends through the com port in the kernel driver debugger. Now the way I’m doing this is by using a virtual machine which you can set up a com port to connect with the debugger. All you need to do is to name the pipe name and choose the port number. 
 
@@ -29,6 +29,7 @@ After that I tried a second time with the result being another failure. This tim
 cazz, 2024, YOUR FIRST KERNEL DRIVER (FULL GUIDE), Youtube, Available at: https://www.youtube.com/watch?v=n463QJ4cjsU 
 Walter Oney, 2003, Programming the Microsoft Windows Driver Model, Microsoft, Available at: https://empyreal96.github.io/nt-info-depot/Windows-DDK/Programming.the.Microsoft.Windows.Driver.Model.2nd.Edition.pdf 
 N/A, 2025, Tutorial: Write a Hello World Windows Driver (Kernel-Mode Driver Framework), Microsoft, Available at: https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/writing-a-very-small-kmdf--driver 
+
 
 
 
