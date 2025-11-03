@@ -27,6 +27,7 @@ After that I tried a second time with the result being another failure. This tim
 
 # Bibliography
 cazz, 2024, YOUR FIRST KERNEL DRIVER (FULL GUIDE), Youtube, Available at: https://www.youtube.com/watch?v=n463QJ4cjsU 
-Walter Oney, 2003, Programming the Microsoft Windows Driver Model, Microsoft, Available at: https://empyreal96.github.io/nt-info-depot/Windows-DDK/Programming.the.Microsoft.Windows.Driver.Model.2nd.Edition.pdf 
-N/A, 2025, Tutorial: Write a Hello World Windows Driver (Kernel-Mode Driver Framework), Microsoft, Available at: https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/writing-a-very-small-kmdf--driver 
 
+Walter Oney, 2003, Programming the Microsoft Windows Driver Model, Microsoft, Available at: https://empyreal96.github.io/nt-info-depot/Windows-DDK/Programming.the.Microsoft.Windows.Driver.Model.2nd.Edition.pdf 
+
+N/A, 2025, Tutorial: Write a Hello World Windows Driver (Kernel-Mode Driver Framework), Microsoft, Available at: https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/writing-a-very-small-kmdf--driver 
